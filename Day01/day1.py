@@ -15,4 +15,4 @@ def find_max_elf(data, first_n_elves):
 
 
 print(f'First part: {find_max_elf(data, 1)}')
-print(f'First part: {find_max_elf(data, 3)}')
+print(f'Second part: {find_max_elf(data, 3)}')
