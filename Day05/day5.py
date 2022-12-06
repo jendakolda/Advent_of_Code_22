@@ -4,9 +4,9 @@ crates_A = {}
 with open('input5.txt', 'r') as source:
     layout, moves = source.read().split('\n\n')
 layers = layout.split('\n')
-col_nums = layers[-1].translate(' ')
+col_nums = layers[-1].translate(' ')  # takes the last line and removes blank spoces
 for column in map(int, col_nums.split()):
-    crates_A[column] = []
+    crates_A[column] = []  # creates a dictionary with integers from last line as keys and empty lists as values
 
 for num, layer in enumerate(reversed(layers[:-1])):
     l = [layer[i * 4: i * 4 + 4].strip(' []') for i in range(len(layer)//4 + 1)]
